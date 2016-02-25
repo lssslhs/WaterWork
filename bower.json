@@ -1,0 +1,26 @@
+{
+  "name": "Hexagon",
+  "version": "0.0.1",
+  "homepage": "https://github.com/lssslhs/Hexagon",
+  "keywords": [
+    "team",
+    "project"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "public/bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.1",
+    "angular": "~1.2.26",
+    "angular-route": "~1.2.26",
+    "angular-loader": "~1.2.26",
+    "angular-mocks": "~1.2.26",
+    "html5-boilerplate": "~4.3.0",
+    "bootstrap": "~3.2.0"
+  }
+}

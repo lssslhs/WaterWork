@@ -1,0 +1,10 @@
+logs/*
+!.gitkeep
+node_modules/
+.idea
+.DS_Store
+public/bower_components/
+public/images/
+public/Sound/
+public/video/
+game.tar.gz

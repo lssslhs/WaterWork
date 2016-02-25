@@ -1,0 +1,31 @@
+.title
+{
+	font-size: 36px;
+}
+
+.hide
+{
+	display: none;
+}
+
+#cancelB
+{
+	margin:0 0 0 0;
+	font-size: 24px;
+}
+
+#numofNom
+{
+	margin:10px 0 0 0;
+}
+
+#reserve
+{
+	margin:10px 0 0 0;
+	font-size: 24px;
+}
+
+#seeall
+{
+	margin:10px 0 0 0;
+}

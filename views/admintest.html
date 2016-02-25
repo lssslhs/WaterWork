@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap-theme.min.css">
+		<link rel="stylesheet" type="text/css" href="stylesheets/admintest.css">
+		<link rel="stylesheet" href="bower_components/jquery-ui/themes/smoothness/jquery-ui.min.css">
+		<script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+		<script type="text/javascript" src="bower_components/jquery-ui/jquery-ui.min.js"></script>
+		<script type="text/javascript" src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+	</head>
+
+	<body class="container">
+		<div class="row" id="competition_container">
+			</br>
+			</br>
+			</br>
+			<div class="col-md-4">
+				<p class="title">Competition Status:</p>
+			</div>
+			<div class="col-md-3">
+				<p class="title bg-danger text-center" id="status">Off</p>
+			</div>
+			<div class="col-md-1">
+				<button type="button" class="btn btn-info hide" id="cancelB">Cancel</button>
+			</div>
+		</div>
+		</br>
+		</br>
+		</br>
+		<div class="row">
+			<div class="col-md-3">
+				<p class="title">Start Date</p>
+				<div class="row">
+					 <div class='input-group date'>
+	                    <input type='text' class="form-control" id='datetimepicker1'/>
+	                    </span>
+	                </div>
+				</div>
+			</div>
+			<div class="col-md-3">
+				<p class="title">End Date</p>
+				<div class="row">
+					 <div class='input-group date'>
+	                    <input type='text' class="form-control" id='datetimepicker2'/>
+	                    </span>
+	                </div>
+				</div>
+			</div>
+		</div>
+		</br>
+		</br>
+		</br>
+		<div class="row">
+			<div class="col-md-4">
+				<p class="title">Number of Nominees</p>
+			</div>
+			<div class="col-md-1">
+				<input type="text" class="form-control" placeholder="0" id="numofNom">
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-4">
+				<button type="button" class="btn btn-primary" id="reserve">Reserve</button>
+			</div>
+		</div>
+		</br>
+		<hr>
+		</br>
+		<div class="row">
+			<div class="col-md-6">
+				<p class="title">Nominees from last competition</p>
+			</div>
+			<div class="col-md-1">
+				<button type="button" class="btn btn-primary" id="seeall">See all</button>
+			</div>
+		</div>
+		</br>
+		</br>
+		<table class="table table-bordered" id="ranktable">
+			<tr>
+				<th>
+					Rank
+				</th>
+				<th>
+					ID
+				</th>
+				<th>
+					Name
+				</th>
+				<th>
+					Gift Code
+				</th>
+				<th>
+					Received?
+				</th>
+			</tr>
+			<tr>
+				<td>
+					1
+				</td>
+				<td>
+					235
+				</td>
+				<td>
+					Mike
+				</td>
+				<td>
+					55129
+				</td>
+				<td>
+					<input type="checkbox">
+				</td>
+			</tr>
+			<tr>
+				<td>
+					2
+				</td>
+				<td>
+					299
+				</td>
+				<td>
+					Jack
+				</td>
+				<td>
+					32481
+				</td>
+				<td>
+					<input type="checkbox">
+				</td>
+			</tr>
+			<tr>
+				<td>
+					3
+				</td>
+				<td>
+					857
+				</td>
+				<td>
+					Lilian
+				</td>
+				<td>
+					85638
+				</td>
+				<td>
+					<input type="checkbox">
+				</td>
+			</tr>
+		</table>
+	</body>
+
+	<footer>
+	</footer>
+
+	<script type="text/javascript">
+        $(function () {
+            $('#datetimepicker1').datepicker();
+            $('#datetimepicker2').datepicker();
+            $('#ranktable').dialog({autoOpen : false});
+            $('#reserve').click(function()
+        	{
+        		$(this).toggleClass('hide');
+        		$('#cancelB').toggleClass('hide');
+        		$('#status').text('RESERVE').toggleClass('bg-danger bg-info');
+
+        		$('#datetimepicker1').prop('disabled',true);
+        		$('#datetimepicker2').prop('disabled',true);
+        		$('#numofNom').prop('disabled',true);
+            });
+            $('#cancelB').click(function()
+        	{
+        		$(this).toggleClass('hide');
+        		$('#reserve').toggleClass('hide');
+        		$('#status').text('off').toggleClass('bg-danger bg-info');
+
+        		$('#datetimepicker1').prop('disabled',false);
+        		$('#datetimepicker2').prop('disabled',false);
+        		$('#numofNom').prop('disabled',false);
+            });
+            $('#seeall').click(function()
+        	{
+        		$('#ranktable').dialog('open');
+            });
+        });
+
+    </script>
+
+</html>

@@ -1,0 +1,274 @@
+@import url(http://fonts.googleapis.com/css?family=Open Sans);
+        *,
+        *::before,
+        *::after {
+          -webkit-box-sizing: border-box;
+          -moz-box-sizing: border-box;
+          box-sizing: border-box;
+        }
+
+        body {
+          
+          position:relative;
+          height:100%;
+          font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+        }
+
+        a {
+          display: block;
+          width: 100%;
+          height: 100%;
+        }
+
+        .menu-opener,.menu-opener.active, .menu-opener-inner, .menu-opener-inner::before, .menu-opener-inner::after, .menu, .menu.active {
+          -webkit-transition: 250ms all;
+          transition: 250ms all;
+         /* border-radius: 15px;*/
+         
+        }
+        .menu-opener:hover{
+          -webkit-transition: 250ms all;
+          transition: 250ms all;
+         /* border-radius: 15px;*/
+          background-image: url("/static/images/menu-button-on.png");
+          background-size: 100%;
+          background-repeat: no-repeat; 
+        }
+
+        .menu-opener {
+          cursor: pointer;
+          height: 60px;
+          position: relative;
+          top: 0%;
+          left: 0%;
+          -webkit-user-select: none;
+          -moz-user-select: none;
+          -ms-user-select: none;
+          user-select: none;
+          width: 64px;
+         /* border-radius: 15px;*/
+          background-image: url("/static/images/menu-button-off.png");
+          background-size: 100%;
+          background-position: center;
+          background-repeat: no-repeat;
+          /*background: #5E5C55;  toggle icon color : grey*/
+          z-index: 1;
+        }
+
+        .menu-opener:hover, .menu-opener.active {
+         /* background: #2C2A1F; /* toggle icon color : black*/
+         /* border-radius: 15px;*/
+          
+        }
+        
+
+        .menu-opener-inner {    /* middle line of the three line */
+          background: #fff;
+          height: 0.5rem;
+          margin-left: 0.5rem;
+          margin-top: 2.5rem;
+          width: 2.5rem;
+        }
+        .menu-opener-inner::before, .menu-opener-inner::after { /* the first and third line of the three line */
+          background: white;
+          content: '';
+          display: block;
+          height: .5rem;
+          width: 2.5rem;
+        }
+        .menu-opener-inner::before {
+          -webkit-transform: translateY(-0.75rem);
+          -ms-transform: translateY(-0.75rem);
+          transform: translateY(-0.75rem);
+        }
+        .menu-opener-inner::after {
+          -webkit-transform: translateY(0.25rem);
+          -ms-transform: translateY(0.25rem);
+          transform: translateY(0.25rem);
+        }
+        .menu-opener-inner.active {
+          background: transparent;  /* middle line of the three line hide - so that show as cross */
+        }
+        .menu-opener-inner.active::before {
+          -webkit-transform: translateY(0rem) rotate(-45deg);
+          -ms-transform: translateY(0rem) rotate(-45deg);
+          transform: translateY(0rem) rotate(-45deg);
+        }
+        .menu-opener-inner.active::after {
+          -webkit-transform: translateY(-0.5rem) translateX(0rem) rotate(45deg);
+          -ms-transform: translateY(-0.5rem) translateX(0rem) rotate(45deg);
+          transform: translateY(-0.5rem) translateX(0rem) rotate(45deg);
+
+        }
+
+        .menu {
+          color: transparent;
+          margin-top: 8px;
+          margin-left: -30px;
+          z-index: -1;
+          height: 50px;
+          position: relative;
+          
+          top: 2%;
+          left: 0.2%;
+          -webkit-user-select: none;
+          -moz-user-select: none;
+          -ms-user-select: none;
+          user-select: none;
+          width: 0rem;
+          border-radius: 0px;
+        }
+        .menu.active {
+          color: transparent;
+          margin-top: 7px;
+          margin-left: -30px;
+          /* background: #B3B2AD; menu connect color : grey*/
+          background-image:url("/static/images/menu-bar.png");
+          background-repeat: no-repeat;
+          width: -webkit-calc(51% - 2rem);  /* length of toggle bar */
+          width: calc(51% - 2rem);
+          border-radius: 0px;
+          z-index: 0;
+        }
+        .menu.active .menu-link {
+          z-index: 2;
+          color: white;
+          text-align: center;  /* here is the place for menu words!!*/
+          font-size: 10px;
+          background-position: center;
+           background-size: 90% 92.5%;
+          background-repeat: no-repeat;
+        }
+        .menu.active .menu-link:hover{
+          z-index: 2;
+          text-decoration: none;
+          font-size: 12px;
+           background-position: center;
+           background-size: 90% 92.5%;
+          background-repeat: no-repeat;
+          background-image:url("/static/images/menu-bar-on.png");
+        }
+        #menuActive{
+          z-index: -20;
+          background-position: center;
+          background-size: 90% 92.5%;
+          
+        }
+        .menu.active #menuActive{
+          z-index: 2;
+          text-decoration: none;
+          font-size: 12px;
+          background-image:url("/static/images/menu-bar-on.png");
+          background-position: center;
+          background-size: 90% 92.5%;
+          background-repeat: no-repeat;
+        }
+        .menu-inner {
+          display: -webkit-box;
+          display: -webkit-flex;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-orient: horizontal;
+          -webkit-box-direction: normal;
+          -webkit-flex-direction: row;
+          -ms-flex-direction: row;
+          flex-direction: row;
+          height: 75%;
+          width: 380px;  /* must hard code */
+          
+          margin-left: 22px;
+          padding: 0;
+        }
+
+        .menu-link {
+          color: transparent;   /*befor span menu*/
+        
+          font-size: 10px;
+          font-weight: 100;
+          height: 100%;
+          
+          text-decoration: none;
+          z-index: -1;
+        }
+        
+        .a{
+          width: 25%;
+          height: 100%;
+        }
+
+        @media screen and (max-width: 768px) {
+          .menu {
+            height: auto;
+          }
+          .menu-inner {
+            display: block;
+          }
+          .menu-link {
+            
+            font-size: 10px;
+            font-family: 'Open Sans';
+            
+          }
+          .menu.active {
+            width: -webkit-calc(100% - 0.5rem);
+            width: calc(100% - 0.5rem);
+          }
+        }
+
+          .nav-container{
+            width:300px;
+
+            margin-top:10px;
+            box-shadow: 0 2px 2px 2px black;
+            transition: all 0.3s linear;
+          }
+          .nav{
+            list-style-type:none;
+            margin:0;
+            padding:0;
+            width: 80%;
+            overflow-y:auto; 
+          }
+         li{
+            height:100%; 
+            position:relative;
+            width: 25%;
+           
+          }
+          a {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            display:block;
+            height:100%;
+            width:100%;
+            line-height:50px;
+            color:#0073b7;
+            text-transform: uppercase;
+            font-weight: bold;
+            padding-left:0%;
+            border-left:5px solid transparent;
+            letter-spacing:1px;
+            transition: all 0.3s linear;
+          }
+          
+
+          span[class ^= "icon"]{
+            position:relative;
+            left:20px;
+            font-size: 10px;
+            transition: all 0.3s linear;
+          }
+
+          @media only screen and (max-width : 860px){
+            
+            .text{
+              display:none;
+            }
+            
+            .nav-container , a{
+              width: 70px;
+              
+            }
+             
+            
+          }
+

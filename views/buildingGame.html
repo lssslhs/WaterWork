@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="stylesheets/mycss.css">
+		<link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,300,400italic,400,600italic,600,700italic,700,800italic,800" rel="stylesheet" type="text/css">
+		<!-- Setup -->
+        <script type="text/javascript" src="javascripts/setup/parameters.js"></script>
+		<script type="text/javascript" src="javascripts/setup/images.js"></script>
+        
+        <!-- Main -->
+        <script type="text/javascript" src="javascripts/main/draw.js"></script>
+        <script type="text/javascript" src="javascripts/main/preload.js"></script>
+        
+        <!-- Sprites -->
+		<script type="text/javascript" src="javascripts/spriteClasses/Sprite.js"></script>
+		<script type="text/javascript" src="javascripts/spriteClasses/Hexagon.js"></script>
+		<script type="text/javascript" src="javascripts/spriteClasses/Path.js"></script>
+		<script type="text/javascript" src="javascripts/spriteClasses/bgImage.js"></script>
+        <script type="text/javascript" src="javascripts/spriteClasses/PointBubble.js"></script>
+        
+        <!-- Math -->
+        <script type="text/javascript" src="javascripts/math/random.js"></script>
+        
+        <!-- Particle System -->
+        <script type="text/javascript" src="javascripts/particleSystem/ParticleSystem.js"></script>        
+        <script type="text/javascript" src="javascripts/particleSystem/Particle.js"></script>
+        
+        <!-- Functions -->
+        <script type="text/javascript" src="javascripts/other.js"></script>
+        <script type="text/javascript" src="javascripts/mouse.js"></script>
+		<script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+		<script type="text/javascript" src="javascripts/checkfunction.js"></script>
+		<script type="text/javascript" src="javascripts/countScore.js"></script>
+		<script type="text/javascript" src="javascripts/mapInfo.js"></script>
+		<script type="text/javascript" src="javascripts/changeImage.js"></script>
+		<script type="text/javascript" src="javascripts/removefunction.js"></script>
+		<script type="text/javascript" src="javascripts/buildAction.js"></script>
+		<script type="text/javascript" src="javascripts/clickLog.js"></script>
+		<script type="text/javascript" src="javascripts/constructor.js"></script>
+		<script type="text/javascript" src="javascripts/loadInfo.js"></script>
+		<script type="text/javascript" src="javascripts/drawInfo.js"></script>
+		<script type="text/javascript" src="javascripts/checkState.js"></script>
+		<script type="text/javascript" src="javascripts/writeWords.js"></script>
+		<script type="text/javascript" src="javascripts/animate.js"></script>
+		<script type="text/javascript" src="javascripts/zoomfunction.js"></script>
+		<script type="text/javascript" src="javascripts/tutorial.js"></script>
+		<script type="text/javascript" src="javascripts/sound.js"></script>
+		<script type="text/javascript" src="javascripts/navigation.js"></script>
+		<script type="text/javascript" src="javascripts/message.js"></script>
+
+		 <!-- River -->
+        <script type="text/javascript" src="javascripts/river/Filter.js"></script>
+        <script type="text/javascript" src="javascripts/river/Color.js"></script>
+        <script type="text/javascript" src="javascripts/river/Vector3.js"></script>
+        <script type="text/javascript" src="javascripts/river/Triangle.js"></script>
+        <script type="text/javascript" src="javascripts/river/River.js"></script>
+        <script type="text/javascript" src="javascripts/river/RiverGeometry.js"></script>
+
+        <!-- Score -->
+        
+        <script type="text/javascript" src="javascripts/score/Button.js"></script>
+        <script type="text/javascript" src="javascripts/score/Collision.js"></script>
+        <script type="text/javascript" src="javascripts/score/FontFactory.js"></script>
+        <script type="text/javascript" src="javascripts/score/Mouse.js"></script>
+        <script type="text/javascript" src="javascripts/score/ScoreMessage.js"></script>
+
+        <script type="text/javascript" src="javascripts/score/ScoreSubmit.js"></script>
+        <script type="text/javascript" src="javascripts/score/Score.js"></script>
+
+	</head>
+	<body onload="preload()">
+		<div id='game_container'>
+			<canvas id="hexagonMap" width="1280" height="800" style="margin-left:auto;margin-right:auto;"></canvas>
+			<div id="eventLog_container">
+				
+			</div>
+			<!-- <div id='logInfo_container'>
+				<img id='log_bg' src='images/bg/LogLine.png'>
+				<p id="log">Hello world!</p>
+			</div> -->
+
+			<div id="hexlog_container">
+				<img id="hexlog_bg">
+				<div id="hexlog">
+					
+				</div>
+				<img src="images/icon/Remove_building.png" id="hexlog_remove">
+				<img src="images/icon/Log-Close.png" id="hexlog_close">
+			</div>
+
+			<div id="rebuild_log_container">
+				<img src='images/bg/Rebuilding-box.png' id='rebuild_log_bg'>
+				<div id="rebuild_log">
+					<p class="logtext">Would you like to remove?</p>
+				</div>
+				<img src="images/icon/Rebuilding-Yes.png" id="rebuild_yes">
+				<img src="images/icon/Rebuilding-no.png" id="rebuild_no">
+				<div id="noask_container">
+					<img src="images/icon/Rebuilding-noask-off.png" class="rebuild_noask_img" id="noask_img">
+					<p class="logtext">Don't show this later.</p>
+				</div>
+			</div>
+		</div>
+	</body>
+	<footer>
+	</footer>
+</html>
